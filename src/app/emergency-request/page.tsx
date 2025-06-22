@@ -90,8 +90,8 @@ export default function EmergencyRequestPage(): JSX.Element {
         <div className="container relative z-10 py-16">
           {/* Page Header */}
           <div className="text-center mb-12 fade-in">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-accent rounded-full shadow-xl mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center justify-center w-8 h-8 bg-accent rounded-full shadow-xl mb-4">
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
               </svg>
             </div>
@@ -125,8 +125,8 @@ export default function EmergencyRequestPage(): JSX.Element {
               {submitted && (
                 <div className="absolute inset-0 bg-white flex items-center justify-center z-50 scale-in">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 shadow-xl">
+                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                       </svg>
                     </div>
@@ -514,8 +514,8 @@ export default function EmergencyRequestPage(): JSX.Element {
               <h3 className="text-2xl font-bold text-primary mb-6">Emergency Contact</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
@@ -525,8 +525,8 @@ export default function EmergencyRequestPage(): JSX.Element {
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                   </div>
@@ -536,8 +536,8 @@ export default function EmergencyRequestPage(): JSX.Element {
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
