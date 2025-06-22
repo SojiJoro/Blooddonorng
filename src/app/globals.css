@@ -1151,3 +1151,151 @@ a:focus {
 .text-light {
   color: var(--text-light);
 }
+/*-------------------------------------------
+  Enhanced Form Elements
+-------------------------------------------*/
+/* Radio Button Styling */
+input[type="radio"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--colour-primary);
+  border-radius: 50%;
+  background-color: var(--white);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+input[type="radio"]:checked {
+  background-color: var(--colour-primary);
+  border-color: var(--colour-primary);
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+input[type="radio"]:hover {
+  border-color: var(--colour-accent);
+  box-shadow: 0 0 0 3px rgba(45, 82, 66, 0.1);
+}
+
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 82, 66, 0.2);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--colour-primary);
+  border-radius: var(--radius-sm);
+  background-color: var(--white);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--colour-primary);
+  border-color: var(--colour-primary);
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]:hover {
+  border-color: var(--colour-accent);
+  box-shadow: 0 0 0 3px rgba(45, 82, 66, 0.1);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45, 82, 66, 0.2);
+}
+
+/* Textarea specific styling */
+textarea.form-input {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Select dropdown arrow */
+select.form-input {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Enhanced urgency level styling */
+.urgency-critical {
+  color: var(--colour-accent);
+  font-weight: 600;
+}
+
+.urgency-high {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.urgency-medium {
+  color: var(--colour-primary);
+  font-weight: 500;
+}
+
+/*-------------------------------------------
+  Emergency Page Specific Animations
+-------------------------------------------*/
+@keyframes pulse-urgent {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+}
+
+.emergency-pulse {
+  animation: pulse-urgent 2s infinite;
+}
+
+/*-------------------------------------------
+  Section Dividers
+-------------------------------------------*/
+.section-divider {
+  border-bottom: 2px solid var(--colour-primary);
+  position: relative;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--colour-accent);
+}
