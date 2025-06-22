@@ -42,6 +42,7 @@ export default function Donate() {
         throw new Error('Submission failed');
       }
     } catch (error) {
+      console.error(error);
       alert('There was an error. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -101,7 +102,7 @@ export default function Donate() {
                     </div>
                     <h3 className="text-4xl font-bold text-primary mb-4">Thank You!</h3>
                     <p className="text-light text-lg max-w-md">
-                      Your registration has been received. You're now part of our life-saving community!
+                      Your registration has been received. You&apos;re now part of our life-saving community!
                     </p>
                     <div className="mt-6">
                       <div className="inline-flex items-center px-4 py-2 bg-primary rounded-full text-white text-sm">
