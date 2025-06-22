@@ -132,7 +132,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                     </div>
                     <h3 className="text-4xl font-bold text-primary mb-4">Request Submitted!</h3>
                     <p className="text-light text-lg max-w-md mx-auto mb-4">
-                      Your emergency request has been sent to our donor network. You'll be contacted shortly.
+                      Your emergency request has been sent to our donor network. You&apos;ll be contacted shortly.
                     </p>
                     <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full text-white text-sm">
                       <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -542,7 +542,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-primary mb-2">Response Time</h4>
-                  <p className="text-light mb-2">< 15 minutes</p>
+                  <p className="text-light mb-2">&lt; 15 minutes</p>
                   <p className="text-sm text-light">Average response time</p>
                 </div>
               </div>
@@ -583,7 +583,7 @@ export default function EmergencyRequestPage(): JSX.Element {
           <div className="mt-16 slide-up" style={{ animationDelay: '0.6s' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-accent mb-2">< 15</div>
+                <div className="text-3xl font-bold text-accent mb-2">&lt; 15</div>
                 <div className="text-sm text-light uppercase tracking-wide">Min Response</div>
               </div>
               <div className="text-center">
