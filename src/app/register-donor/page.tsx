@@ -127,12 +127,12 @@ export default function RegisterDonorPage() {
                     Welcome to Our Family!
                   </h2>
                   <p className="text-light mb-6 leading-relaxed">
-                    Thank you for registering as a blood donor. Your generosity can save lives. 
-                    We'll contact you when your blood type is needed.
+                    Thank you for registering as a blood donor. Your generosity can save lives.
+                    We&apos;ll contact you when your blood type is needed.
                   </p>
                   <div className="space-y-4">
                     <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                      <h4 className="font-semibold text-green-800 mb-2">What's Next?</h4>
+                      <h4 className="font-semibold text-green-800 mb-2">What&apos;s Next?</h4>
                       <ul className="text-sm text-green-700 space-y-1 text-left">
                         <li>• Check your email for verification</li>
                         <li>• Complete your health assessment</li>
@@ -399,7 +399,7 @@ export default function RegisterDonorPage() {
                           type="date"
                           className="form-input"
                         />
-                        <p className="text-sm text-light mt-1">If you've donated before, help us track your eligibility</p>
+                        <p className="text-sm text-light mt-1">If you&apos;ve donated before, help us track your eligibility</p>
                       </div>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 // components/StatsSection.tsx
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 // Animation variants
 const sectionVariants = {
@@ -29,38 +29,13 @@ const itemVariants = {
 };
 
 // Counter animation
-const Counter = ({ end, duration = 2, label }: { end: number | string, duration?: number, label: string }) => {
+const Counter = ({ end, duration = 2, label }: { end: number | string; duration?: number; label: string }) => {
   const [count, setCount] = useState(0);
   const nodeRef = useRef<HTMLSpanElement>(null);
   const isInView = useRef(false);
   const countUpRef = useRef<NodeJS.Timeout | null>(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isInView.current) {
-          isInView.current = true;
-          startCounter();
-        }
-      },
-      { threshold: 0.5 }
-    );
-    
-    if (nodeRef.current) {
-      observer.observe(nodeRef.current);
-    }
-    
-    return () => {
-      if (nodeRef.current) {
-        observer.unobserve(nodeRef.current);
-      }
-      if (countUpRef.current) {
-        clearInterval(countUpRef.current);
-      }
-    };
-  }, []);
-  
-  const startCounter = () => {
+
+  const startCounter = useCallback(() => {
     // Handle string values like "24/7"
     if (typeof end === 'string') {
       setCount(1);
@@ -79,7 +54,33 @@ const Counter = ({ end, duration = 2, label }: { end: number | string, duration?
         setCount(current);
       }
     }, 50);
-  };
+  }, [end, duration]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isInView.current) {
+          isInView.current = true;
+          startCounter();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    const currentNode = nodeRef.current;
+    if (currentNode) {
+      observer.observe(currentNode);
+    }
+
+    return () => {
+      if (currentNode) {
+        observer.unobserve(currentNode);
+      }
+      if (countUpRef.current) {
+        clearInterval(countUpRef.current);
+      }
+    };
+  }, [startCounter]);
   
   return (
     <div className="stat-content">
