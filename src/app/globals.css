@@ -414,6 +414,24 @@ body {
   line-height: 1.7;
 }
 
+/* Call-to-action button in hero section */
+.hero-button {
+  background: var(--colour-accent);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: background var(--transition-normal), transform var(--transition-normal);
+  display: inline-block;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-button:hover {
+  background: var(--colour-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
 .hero-image-container {
   width: 100%;
   position: relative;
@@ -856,6 +874,13 @@ body {
 .updates-text {
   color: var(--text-light);
   line-height: 1.6;
+}
+
+/* Small arrow icon in updates link */
+.updates-arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.25rem;
 }
 
 /*-------------------------------------------
@@ -2607,6 +2632,12 @@ input:checked + .notification-slider:before {
   color: var(--colour-accent);
 }
 
+/* Reduce default icon size in forms */
+.form-group svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 /* Tooltip for help text */
 .help-tooltip {
   position: relative;
@@ -3810,6 +3841,34 @@ html.scroll-smooth {
 .global-loading-text {
   color: var(--colour-primary);
   font-weight: 500;
+}
+
+/*-------------------------------------------
+  Footer Styles
+-------------------------------------------*/
+.footer {
+  background: var(--colour-primary);
+  color: var(--white);
+  padding: var(--spacing-lg) var(--spacing-sm);
+  margin-top: var(--spacing-4xl);
+}
+
+.footer-link {
+  color: var(--white);
+  transition: color var(--transition-normal);
+}
+
+.footer-link:hover {
+  color: var(--colour-accent);
+}
+
+.footer-social-icon {
+  color: var(--white);
+  transition: color var(--transition-normal);
+}
+
+.footer-social-icon:hover {
+  color: var(--colour-accent);
 }
 
 /* Responsive typography scaling */
