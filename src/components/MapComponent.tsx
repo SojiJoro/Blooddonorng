@@ -243,3 +243,5 @@ export function MapComponent({
     </div>
   )
 }
+
+export default MapComponent

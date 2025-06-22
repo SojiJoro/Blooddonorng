@@ -5,7 +5,9 @@ import CTASection from "@/components/CTASection";
 import LatestUpdatesSection from "@/components/LatestUpdatesSection";
 import Footer from "@/components/Footer";
 
-const MapComponent = dynamic(() => import("@/components/MapComponent"), { ssr: false });
+const MapComponent = dynamic(() => import("@/components/MapComponent"), {
+  ssr: false,
+});
 
 export default function AboutPage() {
   return (
