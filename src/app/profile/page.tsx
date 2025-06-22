@@ -69,7 +69,7 @@ export default function ProfilePage() {
     return 100;
   };
 
-  const getHealthStatusColor = (status) => {
+  const getHealthStatusColor = (status: string) => {
     switch (status) {
       case 'Excellent': return 'text-primary';
       case 'Good': return 'text-secondary';
@@ -483,7 +483,7 @@ export default function ProfilePage() {
                             <div>
                                                             <h4 className="font-semibold text-green-800">Overall Health Status: {donorProfile.healthData.healthStatus}</h4>
                               <p className="text-sm text-green-700">
-                                All your health metrics are within normal ranges. You're eligible for donation.
+                                All your health metrics are within normal ranges. You&apos;re eligible for donation.
                                 Last health check: {donorProfile.healthData.lastTestDate}
                               </p>
                             </div>
@@ -556,7 +556,7 @@ export default function ProfilePage() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-primary mb-2">
-                  I've saved {donorProfile.totalDonations * 3} lives through blood donation!
+                  I&apos;ve saved {donorProfile.totalDonations * 3} lives through blood donation!
                 </h4>
                 <p className="text-light">
                   {donorProfile.totalDonations} donations • {donorProfile.points} points earned

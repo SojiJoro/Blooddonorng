@@ -149,7 +149,7 @@ export default function RegisterRecipientPage() {
                       <ul className="text-sm text-red-700 space-y-1 text-left">
                         <li>• Medical team will verify your request within 2 hours</li>
                         <li>• Compatible donors will be notified immediately</li>
-                        <li>• You'll receive updates via SMS and email</li>
+                        <li>• You&apos;ll receive updates via SMS and email</li>
                         <li>• Emergency hotline: <strong>(234) 800-BLOOD</strong></li>
                       </ul>
                     </div>
