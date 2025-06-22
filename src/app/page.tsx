@@ -1,5 +1,4 @@
 "use client";
-import "./globals.css"; // Correct path for globals.css
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
