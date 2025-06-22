@@ -74,7 +74,7 @@ function MapUpdater({
   return null
 }
 
-export function MapComponent({
+export default function MapComponent({
   markers = [],
   selectedLocation = null,
   height = "400px",
