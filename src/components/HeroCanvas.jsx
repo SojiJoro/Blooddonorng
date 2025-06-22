@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
+import { ParticleField } from "./ParticleField";
 
 export default function HeroCanvas() {
   return (
@@ -17,6 +18,7 @@ export default function HeroCanvas() {
           minPolarAngle={Math.PI / 2}
         />
         <BloodCellMesh />
+        <ParticleField count={1000} />
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 10]} intensity={0.8} color="#ffffff" />
         <spotLight 

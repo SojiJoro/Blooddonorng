@@ -1,6 +1,7 @@
 // components/FeaturesSection.tsx
 "use client";
 import { motion } from "framer-motion";
+import { GlassCard } from "./GlassCard";
 
 const sectionVariants = {
   hidden: { opacity: 0 },
@@ -41,26 +42,26 @@ export default function FeaturesSection() {
           </motion.p>
           
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
-            <div className="glass-card">
+            <GlassCard extraClasses="text-center">
               <h3 className="feature-heading">Fast & Verified</h3>
               <p className="feature-text">
                 Immediate and verified matching connects donors quickly with those in need.
               </p>
-            </div>
-            
-            <div className="glass-card">
+            </GlassCard>
+
+            <GlassCard extraClasses="text-center">
               <h3 className="feature-heading">Secure & Private</h3>
               <p className="feature-text">
                 Robust data encryption and discreet communication ensure your privacy.
               </p>
-            </div>
-            
-            <div className="glass-card">
+            </GlassCard>
+
+            <GlassCard extraClasses="text-center">
               <h3 className="feature-heading">Community Impact</h3>
               <p className="feature-text">
                 Join a growing network that transforms healthcare by saving lives every day.
               </p>
-            </div>
+            </GlassCard>
           </motion.div>
           
           {/* Stats Section */}
