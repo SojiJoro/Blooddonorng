@@ -11,11 +11,12 @@ export function config() {
   }
 }
 
-export default function handler(req, res) {
-  if (!res.socket.server.io) {
+export async function GET(req) {
+  const { socket } = req
+  if (socket && !socket.server.io) {
     console.log("Initializing Socket.IO")
-    io = new Server(res.socket.server)
-    res.socket.server.io = io
+    io = new Server(socket.server)
+    socket.server.io = io
 
     io.on("connection", (socket) => {
       console.log("New client connected", socket.id)
@@ -31,5 +32,5 @@ export default function handler(req, res) {
       })
     })
   }
-  res.end()
+  return new Response(null, { status: 200 })
 }

@@ -3,7 +3,6 @@ import { NextResponse } from "next/server"
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const bloodGroup = searchParams.get("bloodGroup")
-  const location = searchParams.get("location")
 
   // Example: Dummy donors. Replace with DB queries as needed.
   const donors = [
