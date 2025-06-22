@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import StatsSection from "@/components/StatsSection";
+import AdvancedStatsSection from "@/components/AdvancedStatsSection";
 import CTASection from "@/components/CTASection";
 import LatestUpdatesSection from "@/components/LatestUpdatesSection";
 import Footer from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function AboutPage() {
       </section>
 
       <StatsSection />
+      <AdvancedStatsSection />
 
       <section className="container mx-auto text-center space-y-6">
         <h2 className="text-3xl font-bold">Find Donation Centers Near You</h2>
