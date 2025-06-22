@@ -24,41 +24,41 @@ export default function Donate() {
   };
 
   return (
-    <div>
-      <main>
-        <h1>Donate</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
+    <div className="flex flex-col min-h-screen justify-between">
+      <main className="container max-w-xl mx-auto py-12 space-y-6">
+        <h1 className="text-3xl font-bold text-center text-red-600">Become a Donor</h1>
+        <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-lg shadow">
+          <div>
+            <label className="block font-semibold mb-1">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              className="w-full border border-gray-300 rounded p-2"
             />
-          </label>
-          <br />
-          <label>
-            Blood Type:
+          </div>
+          <div>
+            <label className="block font-semibold mb-1">Blood Type</label>
             <input
               type="text"
               value={bloodType}
               onChange={(e) => setBloodType(e.target.value)}
               required
+              className="w-full border border-gray-300 rounded p-2"
             />
-          </label>
-          <br />
-          <label>
-            Location:
+          </div>
+          <div>
+            <label className="block font-semibold mb-1">Location</label>
             <input
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               required
+              className="w-full border border-gray-300 rounded p-2"
             />
-          </label>
-          <br />
-          <button type="submit">Submit</button>
+          </div>
+          <button type="submit" className="w-full py-2 bg-green-600 text-white rounded hover:bg-green-700">Submit</button>
         </form>
       </main>
       <Footer />

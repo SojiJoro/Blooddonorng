@@ -45,9 +45,9 @@ export default function NavBar() {
           </Link>
         </div>
         
-        <button className="donate-button">
+        <Link href="/donate" className="donate-button">
           Donate Now
-        </button>
+        </Link>
       </div>
     </nav>
   );
