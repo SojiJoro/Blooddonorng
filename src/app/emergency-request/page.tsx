@@ -104,7 +104,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                     <FormControl>
                       <Input placeholder="John Doe" {...field} />
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
@@ -129,7 +129,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                         ))}
                       </SelectContent>
                     </Select>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
@@ -139,14 +139,14 @@ export default function EmergencyRequestPage(): JSX.Element {
               <FormField
                 control={form.control}
                 name="quantity"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem>
                     <FormLabel>Units Required</FormLabel>
                     <FormControl>
                       <Input type="number" min="1" max="10" {...field} />
                     </FormControl>
                     <FormDescription>Specify how many units of blood are needed.</FormDescription>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
@@ -154,7 +154,7 @@ export default function EmergencyRequestPage(): JSX.Element {
               <FormField
                 control={form.control}
                 name="urgencyLevel"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem className="space-y-3">
                     <FormLabel>Urgency Level</FormLabel>
                     <FormControl>
@@ -183,7 +183,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                         </FormItem>
                       </RadioGroup>
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
@@ -192,7 +192,7 @@ export default function EmergencyRequestPage(): JSX.Element {
             <FormField
               control={form.control}
               name="patientCondition"
-              render={({ field }) => (
+              render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                 <FormItem>
                   <FormLabel>Patient Condition</FormLabel>
                   <FormControl>
@@ -205,7 +205,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                   <FormDescription>
                     This information helps donors understand the urgency and importance of their donation.
                   </FormDescription>
-                  <FormMessage children={undefined} />
+                  <FormMessage>{null}</FormMessage>
                 </FormItem>
               )}
             />
@@ -217,13 +217,13 @@ export default function EmergencyRequestPage(): JSX.Element {
             <FormField
               control={form.control}
               name="hospitalName"
-              render={({ field }) => (
+              render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                 <FormItem>
                   <FormLabel>Hospital Name</FormLabel>
                   <FormControl>
                     <Input placeholder="City General Hospital" {...field} />
                   </FormControl>
-                  <FormMessage children={undefined} />
+                  <FormMessage>{null}</FormMessage>
                 </FormItem>
               )}
             />
@@ -231,13 +231,13 @@ export default function EmergencyRequestPage(): JSX.Element {
             <FormField
               control={form.control}
               name="hospitalAddress"
-              render={({ field }) => (
+              render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                 <FormItem>
                   <FormLabel>Hospital Address</FormLabel>
                   <FormControl>
                     <Input placeholder="123 Medical Center Blvd" {...field} />
                   </FormControl>
-                  <FormMessage children={undefined} />
+                  <FormMessage>{null}</FormMessage>
                 </FormItem>
               )}
             />
@@ -246,39 +246,39 @@ export default function EmergencyRequestPage(): JSX.Element {
               <FormField
                 control={form.control}
                 name="city"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem>
                     <FormLabel>City</FormLabel>
                     <FormControl>
                       <Input placeholder="New York" {...field} />
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
               <FormField
                 control={form.control}
                 name="state"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem>
                     <FormLabel>State</FormLabel>
                     <FormControl>
                       <Input placeholder="NY" {...field} />
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
               <FormField
                 control={form.control}
                 name="zipCode"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem>
                     <FormLabel>Zip Code</FormLabel>
                     <FormControl>
                       <Input placeholder="10001" {...field} />
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
@@ -292,26 +292,26 @@ export default function EmergencyRequestPage(): JSX.Element {
               <FormField
                 control={form.control}
                 name="contactName"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem>
                     <FormLabel>Contact Person Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Dr. Jane Smith" {...field} />
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
               <FormField
                 control={form.control}
                 name="contactPhone"
-                render={({ field }) => (
+                render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                   <FormItem>
                     <FormLabel>Contact Phone</FormLabel>
                     <FormControl>
                       <Input placeholder="(123) 456-7890" {...field} />
                     </FormControl>
-                    <FormMessage children={undefined} />
+                    <FormMessage>{null}</FormMessage>
                   </FormItem>
                 )}
               />
@@ -320,13 +320,13 @@ export default function EmergencyRequestPage(): JSX.Element {
             <FormField
               control={form.control}
               name="contactEmail"
-              render={({ field }) => (
+              render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                 <FormItem>
                   <FormLabel>Contact Email</FormLabel>
                   <FormControl>
                     <Input type="email" placeholder="doctor@hospital.com" {...field} />
                   </FormControl>
-                  <FormMessage children={undefined} />
+                  <FormMessage>{null}</FormMessage>
                 </FormItem>
               )}
             />
@@ -334,13 +334,13 @@ export default function EmergencyRequestPage(): JSX.Element {
             <FormField
               control={form.control}
               name="additionalNotes"
-              render={({ field }) => (
+              render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
                 <FormItem>
                   <FormLabel>Additional Notes</FormLabel>
                   <FormControl>
                     <Textarea placeholder="Any additional information that might be helpful for donors." {...field} />
                   </FormControl>
-                  <FormMessage children={undefined} />
+                  <FormMessage>{null}</FormMessage>
                 </FormItem>
               )}
             />
@@ -349,7 +349,7 @@ export default function EmergencyRequestPage(): JSX.Element {
           <FormField
             control={form.control}
             name="consentToShare"
-            render={({ field }) => (
+            render={({ field }: { field: import("react-hook-form").ControllerRenderProps }) => (
               <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
                 <FormControl>
                   <input 
@@ -366,13 +366,13 @@ export default function EmergencyRequestPage(): JSX.Element {
                     importance of their donation.
                   </FormDescription>
                 </div>
-                <FormMessage children={undefined} />
+                <FormMessage>{null}</FormMessage>
               </FormItem>
             )}
           />
 
           <div className="flex items-center gap-2">
-            <Button type="submit" size="lg" disabled={isSubmitting} className="w-full" children={undefined} asChild={undefined}>
+            <Button type="submit" size="lg" disabled={isSubmitting} className="w-full" asChild={false}>
               {isSubmitting ? (
                 <>
                   <Clock className="mr-2 h-4 w-4 animate-spin" />

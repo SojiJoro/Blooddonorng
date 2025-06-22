@@ -11,6 +11,9 @@ import {
 import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 import { Droplet, MapPin, Hospital } from "lucide-react"
+import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png"
+import iconUrl from "leaflet/dist/images/marker-icon.png"
+import shadowUrl from "leaflet/dist/images/marker-shadow.png"
 
 interface MapMarker {
   position: { lat: number; lng: number }
@@ -50,11 +53,11 @@ const nigerianCities = [
 ]
 
 // fix Leaflet’s default icon paths
-delete (L.Icon.Default.prototype as any)._getIconUrl
+delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: unknown })._getIconUrl
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl:        require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl:      require("leaflet/dist/images/marker-shadow.png"),
+  iconRetinaUrl,
+  iconUrl,
+  shadowUrl,
 })
 
 function MapUpdater({
