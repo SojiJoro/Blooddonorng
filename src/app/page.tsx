@@ -30,9 +30,9 @@ export default function HomePage() {
 
       {/* Animated Gradient Overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-red-800 via-pink-700 to-yellow-500 opacity-70 animate-gradient"
+        className="absolute inset-0 bg-gradient-to-br from-red-800 via-pink-700 to-yellow-500 opacity-60 animate-gradient"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.7 }}
+        animate={{ opacity: 0.6 }}
         transition={{ duration: 2 }}
       ></motion.div>
 

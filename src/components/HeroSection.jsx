@@ -17,10 +17,7 @@ export default function HeroSection() {
             <p className="hero-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirot, utricien ulsum.
             </p>
-            <Link
-              href="/donate"
-              className="hero-button"
-            >
+            <Link href="/donate" className="hero-button">
               GET STARTED
             </Link>
           </div>

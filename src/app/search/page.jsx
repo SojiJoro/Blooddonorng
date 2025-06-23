@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Footer from '@/components/Footer'
 
 export default function SearchPage() {
   const [bloodGroup, setBloodGroup] = useState("")
@@ -18,51 +19,56 @@ export default function SearchPage() {
   }
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h1>Search for Donors</h1>
-      <form onSubmit={handleSearch}>
-        <label>
-          Blood Group<br/>
-          <select
-            value={bloodGroup}
-            onChange={(e) => setBloodGroup(e.target.value)}
-            required
-          >
-            <option value="">Select Blood Group</option>
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
-            <option value="O+">O+</option>
-            <option value="O-">O-</option>
-          </select>
-        </label>
-        <br/><br/>
-        <label>
-          Location<br/>
-          <input
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            required
-          />
-        </label>
-        <br/><br/>
-        <button type="submit">Search</button>
-      </form>
-
-      <div style={{ marginTop: "2rem" }}>
-        {results.map((donor) => (
-          <div key={donor.id} style={{ marginBottom: "1rem" }}>
-            <p>
-              <strong>Name:</strong> {donor.name}<br/>
-              <strong>Blood Group:</strong> {donor.bloodGroup}
-            </p>
+    <div className="min-h-screen flex flex-col">
+      <section className="container mx-auto flex-1 py-16 space-y-8">
+        <h1 className="text-3xl font-bold text-primary text-center">Search for Donors</h1>
+        <form onSubmit={handleSearch} className="space-y-6 max-w-md mx-auto">
+          <div className="form-group">
+            <label className="form-label">Blood Group</label>
+            <select
+              value={bloodGroup}
+              onChange={(e) => setBloodGroup(e.target.value)}
+              required
+              className="form-input"
+            >
+              <option value="">Select Blood Group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
           </div>
-        ))}
-      </div>
+          <div className="form-group">
+            <label className="form-label">Location</label>
+            <input
+              type="text"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              required
+              className="form-input"
+              placeholder="Enter city or state"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary btn-md w-full">Search</button>
+        </form>
+
+        <div className="space-y-4">
+          {results.map((donor) => (
+            <div key={donor.id} className="p-4 bg-white rounded-lg shadow">
+              <p className="text-sm text-dark">
+                <strong>Name:</strong> {donor.name}
+                <br />
+                <strong>Blood Group:</strong> {donor.bloodGroup}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <Footer />
     </div>
   )
 }
