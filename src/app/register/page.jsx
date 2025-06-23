@@ -4,6 +4,7 @@ import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Footer from '@/components/Footer';
+import Icon from '@/components/Icon';
 
 const bloodTypes = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
 
@@ -188,9 +189,9 @@ function RegisterPageInner() {
                           Your registration has been successful. Redirecting to your dashboard...
                         </p>
                         <div className="inline-flex items-center px-4 py-2 bg-accent rounded-full text-white text-sm">
-                          <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                          <Icon className="w-1.5 h-1.5 mr-2">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                          </svg>
+                          </Icon>
                           Registration Complete
                         </div>
                       </div>
@@ -245,9 +246,9 @@ function RegisterPageInner() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                              </svg>
+                              </Icon>
                               Full Name
                             </label>
                             <input
@@ -263,9 +264,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                              </svg>
+                              </Icon>
                               Email Address
                             </label>
                             <input
@@ -281,9 +282,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                              </svg>
+                              </Icon>
                               Phone Number
                             </label>
                             <input
@@ -299,9 +300,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                              </svg>
+                              </Icon>
                               Blood Type
                             </label>
                             <select
@@ -320,9 +321,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                              </svg>
+                              </Icon>
                               Address
                             </label>
                             <input
@@ -439,9 +440,9 @@ function RegisterPageInner() {
                             </>
                           ) : (
                             <>
-                              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                              </svg>
+                              </Icon>
                               Register as Blood Donor
                             </>
                           )}
@@ -455,9 +456,9 @@ function RegisterPageInner() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                              </svg>
+                              </Icon>
                               Contact Person Name
                             </label>
                             <input
@@ -473,9 +474,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                              </svg>
+                              </Icon>
                               Email Address
                             </label>
                             <input
@@ -491,9 +492,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                              </svg>
+                              </Icon>
                               Phone Number
                             </label>
                             <input
@@ -509,9 +510,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                              </svg>
+                              </Icon>
                               Required Blood Type
                             </label>
                             <select
@@ -530,9 +531,9 @@ function RegisterPageInner() {
 
                           <div className="form-group">
                             <label className="form-label">
-                              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 2h2v4h4v2h-4v4h-2v-4H7v-2h4V5z"/>
-                              </svg>
+                              </Icon>
                               Hospital Name
                             </label>
                             <input
@@ -642,9 +643,9 @@ function RegisterPageInner() {
 
                         <div className="form-group">
                           <label className="form-label">
-                            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <Icon className="w-1.5 h-1.5 mr-2">
                               <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
-                            </svg>
+                            </Icon>
                             Urgency Level
                           </label>
                           <select
@@ -689,9 +690,9 @@ function RegisterPageInner() {
                             </>
                           ) : (
                             <>
-                              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <Icon className="w-1.5 h-1.5 mr-2">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 2h2v4h4v2h-4v4h-2v-4H7v-2h4V5z"/>
-                              </svg>
+                              </Icon>
                               Register as Blood Recipient
                             </>
                           )}
@@ -713,21 +714,21 @@ function RegisterPageInner() {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex flex-wrap justify-center gap-4 text-sm text-light">
                         <span className="flex items-center">
-                          <svg className="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                          <Icon className="w-1.5 h-1.5 mr-2 text-primary">
                             <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                          </svg>
+                          </Icon>
                           HIPAA Compliant
                         </span>
                         <span className="flex items-center">
-                          <svg className="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                          <Icon className="w-1.5 h-1.5 mr-2 text-primary">
                                                         <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
-                          </svg>
+                          </Icon>
                           Secure & Encrypted
                         </span>
                         <span className="flex items-center">
-                          <svg className="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                          <Icon className="w-1.5 h-1.5 mr-2 text-primary">
                             <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                          </svg>
+                          </Icon>
                           Verified Network
                         </span>
                       </div>
