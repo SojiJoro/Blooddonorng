@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState, ChangeEvent, FormEvent } from 'react'
-import './global.css'
+import React, { useState, FormEvent } from 'react'
+import '../globals.css'
 
 interface FormData {
   name: string
@@ -15,7 +15,7 @@ interface FormData {
   healthConditions: string
 }
 
-export default function EnhancedDonate(): JSX.Element {
+export default function EnhancedDonate() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     bloodType: '',
@@ -28,26 +28,8 @@ export default function EnhancedDonate(): JSX.Element {
     healthConditions: ''
   })
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
-  const [submitted, setSubmitted] = useState<boolean>(false)
   const [error, setError] = useState<string>('')
   const [currentStep, setCurrentStep] = useState<number>(1)
-
-  const bloodTypes: string[] = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-']
-  const nigerianStates: string[] = [
-    'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno',
-    'Cross River', 'Delta', 'Ebonyi', 'Edo', 'Ekiti', 'Enugu', 'FCT', 'Gombe',
-    'Imo', 'Jigawa', 'Kaduna', 'Kano', 'Katsina', 'Kebbi', 'Kogi', 'Kwara',
-    'Lagos', 'Nasarawa', 'Niger', 'Ogun', 'Ondo', 'Osun', 'Oyo', 'Plateau',
-    'Rivers', 'Sokoto', 'Taraba', 'Yobe', 'Zamfara'
-  ]
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ): void => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    if (error) setError('')
-  }
 
   const validateStep = (step: number): boolean => {
     switch (step) {
@@ -112,12 +94,10 @@ export default function EnhancedDonate(): JSX.Element {
 
     try {
       await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitted(true)
       setTimeout(() => {
         setFormData({
           name: '', bloodType: '', location: '', phone: '', email: '', age: '', weight: '', lastDonation: '', healthConditions: ''
         })
-        setSubmitted(false)
         setCurrentStep(1)
       }, 4000)
     } catch {
@@ -127,7 +107,7 @@ export default function EnhancedDonate(): JSX.Element {
     }
   }
 
-  const renderStep = (): JSX.Element | null => {
+  const renderStep = () => {
     switch (currentStep) {
       case 1:
         return (
