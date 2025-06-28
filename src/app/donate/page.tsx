@@ -1,4 +1,5 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react'
+"use client"
+import React, { useState, ChangeEvent, FormEvent, JSX } from 'react'
 
 interface FormData {
   name: string
@@ -281,7 +282,7 @@ export default function EnhancedDonate(): JSX.Element {
           <div className="success-card">
             <div className="success-icon">✓</div>
             <h2>Registration Successful!</h2>
-            <p>Thank you for registering to donate blood. We'll contact you soon with donation details.</p>
+            <p>Thank you for registering to donate blood. We&apos;ll contact you soon with donation details.</p>
             <div className="success-details">
               <p><strong>Name:</strong> {formData.name}</p>
               <p><strong>Blood Type:</strong> {formData.bloodType}</p>
