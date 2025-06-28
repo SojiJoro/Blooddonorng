@@ -169,7 +169,7 @@ export default function ContactPage() {
   if (submitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-pink-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-xl">
+        <div className="success-message bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-xl">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-8 h-8 text-green-600" />
           </div>
@@ -195,7 +195,7 @@ export default function ContactPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">🩸</span>
+                <span className="blood-icon text-white font-bold text-lg">🩸</span>
               </div>
               <h1 className="text-2xl font-bold text-gray-900">BloodLife Nigeria</h1>
             </div>
@@ -233,7 +233,7 @@ export default function ContactPage() {
               </div>
             )}
 
-            <div className="space-y-6">
+            <form onSubmit={handleSubmit} className="contact-form space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -337,12 +337,12 @@ export default function ContactPage() {
               </div>
 
               <button
-                onClick={handleSubmit}
+                type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center space-x-2"
+                className="gradient-btn w-full bg-gradient-to-r from-red-600 to-pink-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  <div className="loading-spinner rounded-full h-5 w-5 border-b-2 border-white"></div>
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
@@ -350,13 +350,13 @@ export default function ContactPage() {
                   </>
                 )}
               </button>
-            </div>
+            </form>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Emergency Contact */}
-            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6">
+            <div className="emergency-card bg-red-50 border-2 border-red-200 rounded-2xl p-6">
               <h3 className="text-2xl font-bold text-red-800 mb-4">🚨 Emergency Blood Request</h3>
               <p className="text-red-700 mb-4">For urgent blood requirements, contact our 24/7 emergency hotline:</p>
               <div className="space-y-2">
@@ -376,7 +376,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="contact-icon w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
@@ -387,7 +387,7 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="contact-icon w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
@@ -398,7 +398,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="contact-icon w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
@@ -408,7 +408,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="contact-icon w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
@@ -432,10 +432,10 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {donationCenters.map((center) => (
-              <div key={center.id} className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-shadow">
+              <div key={center.id} className="center-card bg-white rounded-2xl shadow-xl p-6">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{center.name}</h3>
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                  <div className="contact-icon w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-red-600" />
                   </div>
                 </div>
@@ -468,7 +468,7 @@ export default function ContactPage() {
                     {center.services.map((service, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-red-50 text-red-700 text-sm rounded-full border border-red-200"
+                        className="service-tag px-3 py-1 bg-red-50 text-red-700 text-sm rounded-full border border-red-200"
                       >
                         {service}
                       </span>
@@ -506,7 +506,7 @@ export default function ContactPage() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">🩸</span>
+                  <span className="blood-icon text-white font-bold">🩸</span>
                 </div>
                 <h3 className="text-xl font-bold">BloodLife Nigeria</h3>
               </div>
