@@ -3924,3 +3924,16 @@ html.scroll-smooth {
     animation-duration: 5s;
   }
 }
+/* Donate Page Styles */
+.progress-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+.donate-hero {
+  background: linear-gradient(to right, #dc2626, #b91c1c);
+}
+
