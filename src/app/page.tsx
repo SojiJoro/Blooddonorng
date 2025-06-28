@@ -126,7 +126,7 @@ export default function HomePage() {
       </div>
 
       {/* Footer */}
-      <Footer className="relative z-20 bg-gray-50 dark:bg-gray-950" />
+      <Footer className="relative z-20 bg-gray-50 text-gray-800 dark:bg-gray-950 dark:text-gray-300" />
 
       {/* Add styles */}
       <style jsx global>{`
