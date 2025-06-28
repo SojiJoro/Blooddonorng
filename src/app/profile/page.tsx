@@ -88,10 +88,10 @@ export default function ProfilePage() {
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                 {/* Profile Avatar */}
                 <div className="relative">
-                  <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-xl">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-accent rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-xl">
                     {donorProfile.name.split(' ').map(n => n[0]).join('')}
                   </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  <div className="absolute -bottom-2 -right-2 w-6 h-6 md:w-8 md:h-8 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {donorProfile.bloodType}
                   </div>
                 </div>
@@ -286,8 +286,8 @@ export default function ProfilePage() {
                         <h3 className="text-xl font-bold text-primary mb-6">Your Impact</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                           <div className="text-center">
-                            <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <div className="w-12 h-12 md:w-16 md:h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                              <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                               </svg>
                             </div>
@@ -295,8 +295,8 @@ export default function ProfilePage() {
                             <div className="text-sm text-light">Lives Potentially Saved</div>
                           </div>
                           <div className="text-center">
-                            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <div className="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                              <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 2h2v4h4v2h-4v4h-2v-4H7v-2h4V5z"/>
                               </svg>
                             </div>
@@ -304,8 +304,8 @@ export default function ProfilePage() {
                             <div className="text-sm text-light">Hospitals Helped</div>
                           </div>
                           <div className="text-center">
-                            <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <div className="w-12 h-12 md:w-16 md:h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                              <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                               </svg>
                             </div>
@@ -327,8 +327,8 @@ export default function ProfilePage() {
                         {donorProfile.donationHistory.map((donation, index) => (
                           <div key={index} className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
                             <div className="flex items-center">
-                              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4">
-                                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                              <div className="w-10 h-10 md:w-12 md:h-12 bg-accent rounded-full flex items-center justify-center mr-4">
+                                <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                                 </svg>
                               </div>
@@ -498,8 +498,8 @@ export default function ProfilePage() {
                         <h3 className="text-xl font-bold text-primary mb-6">Health Check History</h3>
                         <div className="space-y-4">
                           <div className="flex items-center p-4 bg-white rounded-lg border border-gray-100">
-                            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
-                              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                              <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                               </svg>
                             </div>
@@ -550,8 +550,8 @@ export default function ProfilePage() {
               </div>
               
               <div className="text-center mb-6">
-                <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                   </svg>
                 </div>
