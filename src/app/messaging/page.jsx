@@ -22,7 +22,7 @@ export default function MessagingPage() {
     { id: 1, user: "System", message: "Welcome to BloodLink Emergency Chat", timestamp: Date.now(), type: "system" },
     { id: 2, user: "Dr. Smith", message: "We have an urgent O+ blood request at City Hospital", timestamp: Date.now() - 300000, type: "emergency" },
     { id: 3, user: "Sarah M.", message: "I'm O+ and available to donate. What's the timeline?", timestamp: Date.now() - 240000, type: "donor" },
-    { id: 4, user: "Dr. Smith", message: "Thank you Sarah! We need it within 2 hours. Please contact us at (555) 123-4567", timestamp: Date.now() - 180000, type: "medical" },
+    { id: 4, user: "Dr. Smith", message: "Thank you Sarah! We need it within 2 hours. Please contact us at 0800 123 4567", timestamp: Date.now() - 180000, type: "medical" },
   ]
 
   useEffect(() => {
@@ -442,13 +442,13 @@ export default function MessagingPage() {
               <h3 className="text-xl font-bold mb-2">Emergency Contact</h3>
               <p className="mb-4 opacity-90">For immediate medical emergencies, contact emergency services</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="tel:911" className="btn btn-ghost btn-md">
+                <a href="tel:112" className="btn btn-ghost btn-md">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
-                  Call 911
+                  Call 112
                 </a>
-                <a href="tel:+15551234567" className="btn btn-ghost btn-md">
+                <a href="tel:+2348001234567" className="btn btn-ghost btn-md">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 2h2v4h4v2h-4v4h-2v-4H7v-2h4V5z"/>
                   </svg>

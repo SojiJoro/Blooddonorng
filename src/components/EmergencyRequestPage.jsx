@@ -267,7 +267,7 @@ export default function EmergencyRequestPage() {
                   <FormItem>
                     <FormLabel>City</FormLabel>
                     <FormControl>
-                      <Input placeholder="New York" {...field} />
+                      <Input placeholder="Lagos" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -280,7 +280,7 @@ export default function EmergencyRequestPage() {
                   <FormItem>
                     <FormLabel>State</FormLabel>
                     <FormControl>
-                      <Input placeholder="NY" {...field} />
+                      <Input placeholder="State" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -291,9 +291,9 @@ export default function EmergencyRequestPage() {
                 name="zipCode"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Zip Code</FormLabel>
+                    <FormLabel>Postal Code</FormLabel>
                     <FormControl>
-                      <Input placeholder="10001" {...field} />
+                      <Input placeholder="100001" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
