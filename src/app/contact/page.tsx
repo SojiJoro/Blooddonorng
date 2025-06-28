@@ -1,5 +1,7 @@
+"use client"
 import React, { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send, AlertCircle, CheckCircle } from 'lucide-react'
+import Footer from '@/components/Footer'
 
 interface ContactFormData {
   name: string
@@ -174,7 +176,7 @@ export default function ContactPage() {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h2>
           <p className="text-gray-600 mb-4">
-            Thank you for contacting us. We'll get back to you within 24 hours.
+            Thank you for contacting us. We&apos;ll get back to you within 24 hours.
           </p>
           <div className="bg-gray-50 rounded-lg p-4 text-left">
             <p className="text-sm text-gray-600 mb-1"><strong>Name:</strong> {formData.name}</p>
@@ -485,7 +487,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Save Lives?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Every donation can save up to three lives. Book your appointment today and become a hero in someone's story.
+            Every donation can save up to three lives. Book your appointment today and become a hero in someone&apos;s story.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="text-lg px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -499,54 +501,7 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">🩸</span>
-                </div>
-                <h3 className="text-xl font-bold">BloodLife Nigeria</h3>
-              </div>
-              <p className="text-gray-400">
-                Connecting donors with those in need across Nigeria. Together, we save lives.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Donate Blood</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Find Blood</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Emergency</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Volunteer</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Connect</h4>
-              <p className="text-gray-400 mb-2">Emergency Hotline:</p>
-              <p className="text-red-400 font-bold">+234 700 BLOOD-NOW</p>
-              <p className="text-gray-400 mt-2">Email: info@bloodlifenigeria.org</p>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
-            <p>&copy; 2025 BloodLife Nigeria. All rights reserved. Saving lives together.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
