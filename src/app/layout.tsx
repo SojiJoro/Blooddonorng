@@ -8,7 +8,6 @@ export const metadata = {
   description: 'Nigeria\'s premier blood donation platform connecting donors with recipients across the country. Save lives, join our community of heroes.',
   keywords: 'blood donation, Nigeria, blood bank, emergency blood, donors, recipients, healthcare',
   authors: [{ name: 'BloodLink Team' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'BloodLink - Connecting Blood Donors & Recipients',
@@ -22,6 +21,11 @@ export const metadata = {
     title: 'BloodLink - Connecting Blood Donors & Recipients',
     description: 'Nigeria\'s premier blood donation platform connecting donors with recipients across the country.',
   }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

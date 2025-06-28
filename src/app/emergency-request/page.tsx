@@ -341,7 +341,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                         onChange={handleInputChange}
                         required
                         className="form-input"
-                        placeholder="New York"
+                        placeholder="Lagos"
                       />
                     </div>
                     <div className="form-group">
@@ -353,11 +353,11 @@ export default function EmergencyRequestPage(): JSX.Element {
                         onChange={handleInputChange}
                         required
                         className="form-input"
-                        placeholder="NY"
+                        placeholder="State"
                       />
                     </div>
                     <div className="form-group">
-                      <label className="form-label">Zip Code</label>
+                      <label className="form-label">Postal Code</label>
                       <input
                         type="text"
                         name="zipCode"
@@ -365,7 +365,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                         onChange={handleInputChange}
                         required
                         className="form-input"
-                        placeholder="10001"
+                        placeholder="100001"
                       />
                     </div>
                   </div>
@@ -520,7 +520,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-primary mb-2">24/7 Hotline</h4>
-                  <p className="text-light mb-2">(555) 123-4567</p>
+                  <p className="text-light mb-2">0800 123 4567</p>
                   <p className="text-sm text-light">For immediate assistance</p>
                 </div>
                 
@@ -531,7 +531,7 @@ export default function EmergencyRequestPage(): JSX.Element {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-primary mb-2">Emergency Email</h4>
-                  <p className="text-light mb-2">emergency@bloodbank.org</p>
+                  <p className="text-light mb-2">emergency@bloodlink.ng</p>
                   <p className="text-sm text-light">Monitored 24/7</p>
                 </div>
                 

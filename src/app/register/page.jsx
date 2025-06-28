@@ -364,14 +364,14 @@ function RegisterPageInner() {
                           </div>
 
                           <div className="form-group">
-                            <label className="form-label">Zip Code</label>
+                            <label className="form-label">Postal Code</label>
                             <input
                               type="text"
                               name="zipCode"
                               value={donorForm.zipCode}
                               onChange={handleDonorInputChange}
                               className="form-input"
-                              placeholder="Enter zip code"
+                              placeholder="Enter postal code"
                               required
                             />
                           </div>
@@ -587,14 +587,14 @@ function RegisterPageInner() {
                           </div>
 
                           <div className="form-group">
-                            <label className="form-label">Zip Code</label>
+                            <label className="form-label">Postal Code</label>
                             <input
                               type="text"
                               name="zipCode"
                               value={recipientForm.zipCode}
                               onChange={handleRecipientInputChange}
                               className="form-input"
-                              placeholder="Enter zip code"
+                              placeholder="Enter postal code"
                               required
                             />
                           </div>

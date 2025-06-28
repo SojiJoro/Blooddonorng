@@ -653,8 +653,8 @@ export default function RegisterRecipientPage() {
                         (234) 800-BLOOD
                       </a>{" "}
                       or{" "}
-                      <a href="mailto:help@bloodbank.org" className="text-accent hover:text-accent-hover font-semibold">
-                        help@bloodbank.org
+                      <a href="mailto:help@bloodlink.ng" className="text-accent hover:text-accent-hover font-semibold">
+                        help@bloodlink.ng
                       </a>
                     </p>
                   </div>

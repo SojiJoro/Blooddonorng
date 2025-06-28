@@ -13,11 +13,11 @@ const donorProfile = {
   lastDonation: "2024-01-15",
   nextEligibleDate: "2024-03-15",
   joinedDate: "2022-10-01",
-  location: "New York, NY",
-  phone: "+1 (555) 123-4567",
+  location: "Lagos, NG",
+  phone: "+234 801 234 5678",
   emergencyContact: {
     name: "Jane Doe",
-    phone: "+1 (555) 987-6543"
+    phone: "+234 809 876 5432"
   },
   badges: [
     { id: 1, name: "First Time Hero", description: "Completed first donation", earned: true, date: "2022-10-15", icon: "🌟" },
