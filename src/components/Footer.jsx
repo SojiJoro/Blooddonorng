@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Footer() {
+export default function Footer({ className = "" }) {
   return (
-    <footer className="footer bg-gradient-to-r from-red-700 to-green-700 text-white py-8">
+    <footer className={`footer bg-gradient-to-r from-red-700 to-green-700 text-white py-8 ${className}`.trim()}>
       <div className="footer-container max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="footer-brand text-lg font-bold">Blood Donor NG</div>
         <nav className="footer-nav">

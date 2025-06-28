@@ -5,9 +5,9 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import { ParticleField } from "./ParticleField";
 
-export default function HeroCanvas() {
+export default function HeroCanvas({ className = "" }) {
   return (
-    <div className="w-full h-full rounded-lg overflow-hidden">
+    <div className={`w-full h-full rounded-lg overflow-hidden ${className}`.trim()}>
       <Canvas camera={{ position: [0, 0, 15], fov: 75 }}>
         <OrbitControls 
           enableZoom={false} 
