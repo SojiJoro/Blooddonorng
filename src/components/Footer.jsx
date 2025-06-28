@@ -1,40 +1,73 @@
 // components/Footer.jsx
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Footer({ className = "" }) {
   return (
-    <footer className={`footer bg-gradient-to-r from-red-700 to-green-700 text-white py-8 ${className}`.trim()}>
-      <div className="footer-container max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div className="footer-brand text-lg font-bold">Blood Donor NG</div>
-        <nav className="footer-nav">
-          <ul className="flex gap-4">
-            <li>
-              <Link href="/" className="footer-link hover:underline">Home</Link>
-            </li>
-            <li>
-              <Link href="/how-it-works" className="footer-link hover:underline">How It Works</Link>
-            </li>
-            <li>
-              <Link href="/donate" className="footer-link hover:underline">Donate</Link>
-            </li>
-            <li>
-              <Link href="/about" className="footer-link hover:underline">About</Link>
-            </li>
-            <li>
-              <Link href="/contact" className="footer-link hover:underline">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="footer-social mt-4 sm:mt-0 flex gap-4">
-          <a href="https://facebook.com" className="footer-social-icon hover:text-red-200">FB</a>
-          <a href="https://twitter.com" className="footer-social-icon hover:text-red-200">TW</a>
-          <a href="https://instagram.com" className="footer-social-icon hover:text-red-200">IG</a>
+    <footer className={`bg-gray-900 text-white py-12 ${className}`.trim()}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-4 gap-8">
+          <div>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold">🩸</span>
+              </div>
+              <h3 className="text-xl font-bold">BloodLife Nigeria</h3>
+            </div>
+            <p className="text-gray-400">
+              Connecting donors with those in need across Nigeria. Together, we save lives.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">Home</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">About Us</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">Donate Blood</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">Find Blood</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Support</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">FAQ</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">Contact Us</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">Emergency</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-white transition-colors">Volunteer</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Connect</h4>
+            <p className="text-gray-400 mb-2">Emergency Hotline:</p>
+            <p className="text-red-400 font-bold">+234 700 BLOOD-NOW</p>
+            <p className="text-gray-400 mt-2">Email: info@bloodlifenigeria.org</p>
+          </div>
         </div>
-      </div>
-      <div className="footer-bottom mt-4 text-center text-sm">
-        &copy; {new Date().getFullYear()} Blood Donor NG. All rights reserved.
+
+        <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
+          <p>
+            &copy; {new Date().getFullYear()} BloodLife Nigeria. All rights reserved. Saving lives together.
+          </p>
+        </div>
       </div>
     </footer>
   );
