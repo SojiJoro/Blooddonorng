@@ -142,7 +142,7 @@ export default function MessagingPage() {
             <div className="max-w-md mx-auto">
               <div className="glass-card fade-in">
                 <div className="bg-primary p-6 text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                     </svg>

@@ -172,7 +172,7 @@ export default function MapComponent({
         ))}
       </MapContainer>
       <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-        <MapPin className="h-12 w-12 text-muted-foreground mb-2" />
+        <MapPin className="h-10 w-10 sm:h-12 sm:w-12 text-muted-foreground mb-2" />
         <p className="text-muted-foreground mb-4">
           Find blood donors and hospitals across Nigeria
         </p>
