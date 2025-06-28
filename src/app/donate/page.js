@@ -116,6 +116,7 @@ export default function EnhancedDonate() {
         setCurrentStep(1)
       }, 4000)
     } catch (err) {
+      console.error(err)
       setError('There was an error submitting your registration. Please try again.')
     } finally {
       setIsSubmitting(false)
@@ -426,7 +427,7 @@ export default function EnhancedDonate() {
                   </div>
                   <h3 className="text-4xl font-bold text-gray-800 mb-4">Thank You!</h3>
                   <p className="text-gray-600 text-lg max-w-md mx-auto">
-                    Your registration has been received. You're now part of our lifesaving community!
+                    Your registration has been received. You&apos;re now part of our lifesaving community!
                   </p>
                   <div className="mt-6 inline-flex items-center px-6 py-3 bg-green-100 rounded-full text-green-700 text-sm font-semibold">
                     <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
